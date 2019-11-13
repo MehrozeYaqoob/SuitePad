@@ -1,0 +1,7 @@
+what problems you might face if the requests originating from the Webview are SSL encrypted (https), and how you can overcome them?
+
+Well this should always be the case but in our case it won’t load the designated page. 
+1 - We can either proceed (which is not good at all) via handler in onReceivedSslError method.
+2 - We can ask user to either proceed or cancel through alert dialog
+3 - For Android OS 9, we would have to add security config xml and define it in manifest
+4 - To handle SSLHandShakeException we can use TrustManager to resolve trust issues of certificates from CA’s not yet trusted by Android
